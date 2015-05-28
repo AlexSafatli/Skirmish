@@ -1,2 +1,2 @@
 # Skirmish
-A simple Apache Pivot Java application intended to track characters (NPCs and PCs) in a tabletop battle.
+A simple Visual C# WPF application intended to track characters (NPCs and PCs) in a tabletop battle.
