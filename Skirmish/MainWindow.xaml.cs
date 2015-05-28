@@ -25,12 +25,24 @@ namespace Skirmish
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private DockPanel makeNewCharacterPanel()
         {
             DockPanel charPanel = new DockPanel();
+            Label name = new Label();
+            name.Content = "Door";
             ProgressBar healthBar = new ProgressBar();
+            healthBar.Width = 120;
+            healthBar.Height = 10;
             charPanel.Children.Add(healthBar);
-            DockPanel.SetDock(healthBar, Dock.Left);
+            charPanel.Children.Add(name);
+            DockPanel.SetDock(name, Dock.Left);
+            DockPanel.SetDock(healthBar, Dock.Right);
+            return charPanel;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            DockPanel charPanel = makeNewCharacterPanel();
             panel.Children.Add(charPanel);
         }
     }

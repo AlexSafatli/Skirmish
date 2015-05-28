@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Skirmish" Height="342" Width="300">
     <Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="260" Margin="10,41,0,0" VerticalAlignment="Top" Width="272">
-            <StackPanel x:Name="panel" Height="250" Width="248">
+        <ScrollViewer HorizontalAlignment="Left" Height="260" Margin="10,41,0,0" VerticalAlignment="Top" Width="272" CanContentScroll="True">
+            <StackPanel x:Name="panel" Height="250" Width="224">
                 <StackPanel.Resources>
                     <Style TargetType="{x:Type DockPanel}">
                         <Setter Property="Margin" Value="0,10,0,0"></Setter>
