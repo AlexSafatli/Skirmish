@@ -22,6 +22,18 @@ namespace Skirmish
         public NewCharacter()
         {
             InitializeComponent();
+            this.Closing += new System.ComponentModel.CancelEventHandler(NewCharacter_Closing);
+        }
+
+        public void NewCharacter_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+        }
+
+        private void ok_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+            this.Close();
         }
     }
 }

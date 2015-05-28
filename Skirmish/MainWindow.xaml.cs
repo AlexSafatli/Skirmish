@@ -27,6 +27,8 @@ namespace Skirmish
 
         private DockPanel makeNewCharacterPanel()
         {
+            Window charWindow = new NewCharacter();
+            charWindow.ShowDialog();
             DockPanel charPanel = new DockPanel();
             Label name = new Label();
             name.Content = "Door";

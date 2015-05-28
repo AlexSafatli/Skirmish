@@ -12,3 +12,5 @@ A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.Properties.Reso
 A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.csproj.GenerateResource.Cache
 A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.exe
 A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.pdb
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\NewCharacter.g.cs
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\NewCharacter.baml

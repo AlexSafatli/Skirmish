@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Skirmish"
         mc:Ignorable="d"
-        Title="Make New Character" Height="300" Width="300">
+        Title="Make New Character" Height="300" Width="300" ResizeMode="NoResize">
     <Grid>
         <GroupBox x:Name="allegBox" Header="Allegiance" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="54" Width="272">
             <Grid HorizontalAlignment="Left" Height="23" Margin="10,0,-2,0" VerticalAlignment="Top" Width="252">
@@ -18,7 +18,7 @@
         </GroupBox>
         <GroupBox x:Name="defBox" Header="Defences" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Height="77" Width="272"/>
         <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="207,239,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_Copy" Content="OK" HorizontalAlignment="Left" Margin="127,239,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_Copy" Content="OK" HorizontalAlignment="Left" Margin="127,239,0,0" VerticalAlignment="Top" Width="75" Click="ok_Click"/>
 
     </Grid>
 </Window>
