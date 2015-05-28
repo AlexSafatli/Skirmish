@@ -1,0 +1,14 @@
+A:\Development\Repositories\Skirmish\Skirmish\bin\Debug\Skirmish.exe.config
+A:\Development\Repositories\Skirmish\Skirmish\bin\Debug\Skirmish.exe
+A:\Development\Repositories\Skirmish\Skirmish\bin\Debug\Skirmish.pdb
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.csprojResolveAssemblyReference.cache
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\MainWindow.g.cs
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\App.g.cs
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish_MarkupCompile.cache
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish_MarkupCompile.lref
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\MainWindow.baml
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.g.resources
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.Properties.Resources.resources
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.csproj.GenerateResource.Cache
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.exe
+A:\Development\Repositories\Skirmish\Skirmish\obj\Debug\Skirmish.pdb
