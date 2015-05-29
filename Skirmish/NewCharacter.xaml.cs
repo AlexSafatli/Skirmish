@@ -19,21 +19,39 @@ namespace Skirmish
     /// </summary>
     public partial class NewCharacter : Window
     {
+
+        public String CharacterName { get; set; }
+        public int CharacterHealth { get; set; }
+        public bool IsEnemy { get; set; }
+
         public NewCharacter()
         {
             InitializeComponent();
-            this.Closing += new System.ComponentModel.CancelEventHandler(NewCharacter_Closing);
-        }
-
-        public void NewCharacter_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            e.Cancel = true;
+            CharacterName = "Name";
+            CharacterHealth = 0;
+            IsEnemy = false;
         }
 
         private void ok_Click(object sender, RoutedEventArgs e)
         {
+
+
+            int hp;
+            CharacterName = nameTextBox.Text;
+            if (!int.TryParse(hpTextBox.Text,out hp))
+            {
+                MessageBox.Show("HP must be a number.");
+                return;
+            } else if (hp <= 0)
+            {
+                MessageBox.Show("HP must be more than 0.");
+                return;
+            }
+            IsEnemy = (allyRadio.IsChecked != true);
+            CharacterHealth = hp;
             DialogResult = true;
-            this.Close();
+
         }
+
     }
 }

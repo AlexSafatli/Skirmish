@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Skirmish
 {
@@ -27,16 +16,23 @@ namespace Skirmish
 
         private DockPanel makeNewCharacterPanel()
         {
-            Window charWindow = new NewCharacter();
+            NewCharacter charWindow = new NewCharacter();
+            charWindow.Owner = this;
             charWindow.ShowDialog();
             DockPanel charPanel = new DockPanel();
             Label name = new Label();
-            name.Content = "Door";
+            Label hp = new Label();
+            name.Content = charWindow.CharacterName;
+            name.Foreground = (charWindow.IsEnemy) ? Brushes.Red : Brushes.Black;
+            hp.Content = string.Format("({0})", charWindow.CharacterHealth);
             ProgressBar healthBar = new ProgressBar();
             healthBar.Width = 120;
             healthBar.Height = 10;
+            healthBar.Value = 100;
             charPanel.Children.Add(healthBar);
             charPanel.Children.Add(name);
+            charPanel.Children.Add(hp);
+            DockPanel.SetDock(hp, Dock.Left);
             DockPanel.SetDock(name, Dock.Left);
             DockPanel.SetDock(healthBar, Dock.Right);
             return charPanel;

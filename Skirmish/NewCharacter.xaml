@@ -5,20 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Skirmish"
         mc:Ignorable="d"
-        Title="Make New Character" Height="300" Width="300" ResizeMode="NoResize">
+        Title="Make New Character" Height="300" Width="300" MinHeight="10"
+        MinWidth="300" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner">
     <Grid>
-        <GroupBox x:Name="allegBox" Header="Allegiance" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="54" Width="272">
-            <Grid HorizontalAlignment="Left" Height="23" Margin="10,0,-2,0" VerticalAlignment="Top" Width="252">
-                <RadioButton x:Name="radioButton" Content="Ally" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <RadioButton x:Name="radioButton_Copy" Content="Enemy" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <GroupBox x:Name="nameBox" Header="Description" Height="145" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0">
+            <Grid HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" VerticalAlignment="Top" Width="262">
+                <TextBox x:Name="nameTextBox" Height="40" TextWrapping="Wrap" Text="Name" TextAlignment="Center" FontSize="24" Margin="0,10,0,54"/>
+                <TextBox x:Name="hpTextBox" Height="40" Text="0" TextWrapping="Wrap" FontSize="24" TextAlignment="Center" Margin="183,55,0,9" />
+                <Label x:Name="label" Content="HP" HorizontalAlignment="Left" Margin="135,55,0,0" VerticalAlignment="Top" Height="40" Width="43" FontSize="24"/>
             </Grid>
         </GroupBox>
-        <GroupBox x:Name="nameBox" Header="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="75" Width="272">
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="234"/>
+        <GroupBox x:Name="allegBox" Header="Allegiance" Height="50" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" Height="38" Margin="41,10,17,2" VerticalAlignment="Center" Width="202">
+                <RadioButton x:Name="allyRadio" Content="Ally" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="enemyRadio" Content="Enemy" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top"/>
+            </Grid>
         </GroupBox>
-        <GroupBox x:Name="defBox" Header="Defences" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" Height="77" Width="272"/>
-        <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="207,239,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="button_Copy" Content="OK" HorizontalAlignment="Left" Margin="127,239,0,0" VerticalAlignment="Top" Width="75" Click="ok_Click"/>
+
+        <StackPanel Height="30" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,0,10,0"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Button Width="50" Name="okButton" Click="ok_Click" IsDefault="True">OK</Button>
+            <Button Width="50" Name="cancelButton" IsCancel="True">Cancel</Button>
+        </StackPanel>
 
     </Grid>
 </Window>
